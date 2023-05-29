@@ -13,7 +13,7 @@ camera: Array <{
    earth_date: number
 }>
 }
-
+//test nono
 export const normalizePhoto = (input: nasaPhoto ) => ({
 name: input?.name || "",
 date: input?.earth_date || "",
