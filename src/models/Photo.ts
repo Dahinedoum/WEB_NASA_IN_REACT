@@ -28,6 +28,7 @@ export const normalizePhoto = (input: nasaPhotosImg) => ({
    image: input?.img_src || "",
    cameraName: input?.camera.full_name || "",
    status: input?.rover.status || "",
+   earthDate: input?.earth_date || "",
 })
 
 export type Photo = ReturnType <typeof normalizePhoto>

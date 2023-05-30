@@ -39,7 +39,10 @@ const Dashboard: FC = () => {
         <div className='dashboardContent'>
 
           <div className='dashboardCard'>
-          {photos.map((_, index) => (<Card key={index}  />) )}
+          {photos.map((Photo) => (<Card 
+          key={Photo.id} 
+          cameraName={Photo.cameraName} 
+            />) )}
           </div>
 
 

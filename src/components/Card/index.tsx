@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import "./styles.css"
+import {Props} from "./types";
 
 
-
-const Card: FC = () => {
+const Card: FC<Props> = ({cameraName }) => {
   return (
 
   <div className='cardContainer'>
@@ -11,11 +11,12 @@ const Card: FC = () => {
 
 
       <div className='cardHeader'>
-      TITULO
+      {cameraName}
+      
       </div>
 
       <div className='cardFooter'>
-      IMAGEN
+      I M A G E N
       </div>
 
 
