@@ -1,0 +1,25 @@
+.cardContainer{
+   border: 2px solid gray;
+   border-radius: 4px;
+   height: 10rem;
+   width: 10rem;
+
+}
+
+.cardContent {
+   padding: 16px;
+
+
+}
+
+/* .cardHeader{
+
+
+
+} */
+
+.cardFooter{
+   border-top: 2px solid gray;
+
+
+}

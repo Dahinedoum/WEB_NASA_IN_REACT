@@ -1,20 +1,38 @@
 
-
-
-
-export type nasaPhoto = {
-   name: string
+export type nasaPhotosImg = {
+   id: number
+   sol: number
+   camera:{
+      id: number
+      name: string
+      rover_id: number
+      full_name: string
+   }
+   img_src: File
    earth_date: number
+   rover:{
+      id: number
+      name: string
+      landing_date: number   
+      launch: number
+      status: "active"
+   }
 }
 
 export type nasaPhotosResponse = {
-camera: Array <{
-   name: string
-   earth_date: number
-}>
+photos: nasaPhotosImg[]
 }
 
-export const normalizePhoto = (input: nasaPhoto ) => ({
-name: input?.name || "",
-date: input?.earth_date || "",
+export const normalizePhoto = (input: nasaPhotosImg) => ({
+   id: input?.id || "",
+   image: input?.img_src || "",
+   cameraName: input?.camera.full_name || "",
+   status: input?.rover.status || "",
+   earthDate: input?.earth_date || "",
 })
+
+export type Photo = ReturnType <typeof normalizePhoto>
+
+// CATEGORYKEY   ESSS  PHOTOID 
+
+// nasaPhotos BookLists

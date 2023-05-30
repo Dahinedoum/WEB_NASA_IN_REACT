@@ -1,0 +1,15 @@
+.headerContainer {
+   height: 32px;
+
+}
+
+.headerContent{
+background-color: rgb(14, 190, 190);
+padding: 16px;
+}
+
+.title{
+color: white;
+font-size: 24px;
+line-height: 1.2;
+}
