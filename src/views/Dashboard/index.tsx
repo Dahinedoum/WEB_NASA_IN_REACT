@@ -2,7 +2,6 @@ import { FC, useCallback, useEffect, useState } from 'react'
 import Card from '../../components/Card'
 import Header from '../../components/Header'
 import { getNasaPhotos } from '../../services/nasa'
-import { cards } from './constants'
 import "./styles.css"
 import { Photo } from '../../models/Photo'
 
