@@ -1,12 +1,9 @@
 import {FC} from "react";
-import Card from "../../components/Card";
-import { getNasaPhotos } from "../../services/nasa";
 import Header from "../../components/Header";
-
+import Button from "@mui/core/ButtonUnstyled"
 
 const Welcome : FC =  () => {
 
-   getNasaPhotos()
    return (
       <Header />
    )
@@ -14,3 +11,5 @@ const Welcome : FC =  () => {
 }
 
 export default Welcome;
+
+

@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
-import Dashboard from './views/Dashboard';
+import Welcome from './views/Welcome';
+
 
 function App() {
-  return (
-    <Dashboard />
-
+  return ( 
+    <Welcome />
 
   );
 }
 
 export default App;
+// 

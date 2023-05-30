@@ -5,7 +5,7 @@ const Header : FC =  () => {
    return (
       <header>
          <h2>
-         Exploring Mars
+             Exploring Mars
          </h2>      
       </header>
    )
