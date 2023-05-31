@@ -1,8 +1,10 @@
 .cardContainer{
    border: 2px solid gray;
    border-radius: 4px;
-   height: 10rem;
-   width: 10rem;
+   height: 24rem;
+   width: 20rem;
+   padding: 1rem;
+   margin: 1rem;
 
 }
 
@@ -20,6 +22,27 @@
 
 .cardFooter{
    border-top: 2px solid gray;
+   align-items: center;
+   
+}
 
 
+.img {
+   height: 16rem;
+   width: 16rem;
+   padding-top:3rem;
+}
+
+
+.slider-container{
+   height: 43rem;
+   overflow: hidden;
+   padding: 5rem;
+   border: 5px solid rgb(30, 165, 255);
+}
+
+.slider{
+   display: flex;
+   cursor: grab;
+   padding-top: 7rem;
 }
