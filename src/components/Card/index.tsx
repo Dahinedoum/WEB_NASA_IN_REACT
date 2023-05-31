@@ -13,7 +13,6 @@ const Card: FC<Props> = ({cameraName, image
 
       <div className='cardHeader'>
       {cameraName}
-      
       </div>
 
       <div className='cardFooter'>
