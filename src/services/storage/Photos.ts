@@ -1,7 +1,6 @@
-import { Photo } from "../../models/Photo"
+import { Photo } from '../../models/Photo'
 
 const NASA_PHOTO_ID = 'nasaPhotos'
-
 
 export const getCachedNasaPhotos = (): Photo[] => {
   const response = window.localStorage.getItem(NASA_PHOTO_ID)
