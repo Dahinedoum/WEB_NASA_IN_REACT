@@ -8,7 +8,7 @@ export type nasaPhotosImg = {
       rover_id: number
       full_name: string
    }
-   img_src: File
+   img_src: string
    earth_date: number
    rover:{
       id: number

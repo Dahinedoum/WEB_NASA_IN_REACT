@@ -2,7 +2,6 @@ import { FC } from 'react'
 import "./styles.css"
 
 
-
 const Header: FC = () => {
   return (
     <header className="headerContainer">

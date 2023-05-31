@@ -6,7 +6,7 @@ const firebaseConfig = {
     projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
     storageBucket: "nasa-in-react.appspot.com",
     messagingSenderId: "1033280009503",
-    appId: "1:1033280009503:web:96500ef252acb375b4ac2a"
+    appId: "1:1033280009503:web:96500ef252acb375b4ac2a",
   };
 
 const app = initializeApp(firebaseConfig)

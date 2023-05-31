@@ -3,7 +3,8 @@ import "./styles.css"
 import {Props} from "./types";
 
 
-const Card: FC<Props> = ({cameraName }) => {
+const Card: FC<Props> = ({cameraName, image
+ }) => {
   return (
 
   <div className='cardContainer'>
@@ -12,11 +13,10 @@ const Card: FC<Props> = ({cameraName }) => {
 
       <div className='cardHeader'>
       {cameraName}
-      
       </div>
 
       <div className='cardFooter'>
-      I M A G E N
+      <img src={image} alt="#"  className='img'/>
       </div>
 
 
