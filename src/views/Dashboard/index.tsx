@@ -4,6 +4,8 @@ import Header from '../../components/Header'
 import { getNasaPhotos } from '../../services/nasa'
 import "./styles.css"
 import { Photo } from '../../models/Photo'
+import {motion} from "framer-motion"
+
 
 const Dashboard: FC = () => {
   
@@ -36,14 +38,37 @@ const Dashboard: FC = () => {
       <div>
        
         <Header />
+
+
         <div className='dashboardContent'>
 
-          <div className='dashboardCard'>
+
+
+          <motion.div className='dashboardCard'>
+
+            <motion.div className='slider-container'>
+
+
+            <motion.div className='slider' drag="x" dragConstraints={{right:0}} >
+
           {photos.map((Photo) => (<Card 
           key={Photo.id} 
           cameraName={Photo.cameraName} 
-            />) )}
-          </div>
+          image={Photo.image}/>  
+          
+          ))}
+
+            </motion.div>
+
+
+            </motion.div>
+
+
+
+
+          </motion.div>
+
+
 
 
         </div>
