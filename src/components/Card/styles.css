@@ -31,6 +31,7 @@
    padding: 26px;
 
 
+
 }
 
 /* .cardHeader{
@@ -41,18 +42,19 @@
 
 .cardFooter{
    border-top: 2px solid gray;
-   
-   
+
 }
 
 
 .img {
+
    border-radius: 25px;
    height: 16rem;
    width: 16rem;
    padding-top:16px;
    padding-bottom: 16px;
    
+
 }
 
 
@@ -72,4 +74,5 @@
    display: flex;
    cursor: grab;
    /* height: 30rem; */
+
 }

@@ -1,7 +1,9 @@
+
 import { Photo } from "../../models/Photo"
 
 const NASA_PHOTO_ID = 'nasaPhotos'
 export const FAV_PHOTOS = 'favPhotos'
+
 
 export const getCachedNasaPhotos = (): Photo[] => {
   const response = window.localStorage.getItem(NASA_PHOTO_ID)
@@ -11,6 +13,7 @@ export const getCachedNasaPhotos = (): Photo[] => {
 export const setCachedNasaPhotos = (photos: Photo[]) => {
   window.localStorage.setItem(NASA_PHOTO_ID, JSON.stringify(photos))
 }
+
 
 
 export const getFavPhotos = (): Photo[] => {
@@ -46,6 +49,7 @@ export const addFavPhoto = (photo: Photo) => {
 
   setFavPhotos(currentFavPhotos)
 }
+
 
 
 
