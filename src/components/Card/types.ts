@@ -1,4 +1,7 @@
+
+import { Photo } from "../../models/Photo";
+
 export type Props = {
-   cameraName:string;
-   image: string
+   photo: Photo
+
 };
