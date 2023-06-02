@@ -31,7 +31,10 @@ export const normalizePhoto = (input: nasaPhotosImg) => ({
    earthDate: input?.earth_date || "",
 })
 
-export type Photo = ReturnType <typeof normalizePhoto>
+
+export type Photo = ReturnType<typeof normalizePhoto>
+
+
 
 // CATEGORYKEY   ESSS  PHOTOID 
 

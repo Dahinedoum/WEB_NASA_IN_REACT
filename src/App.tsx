@@ -9,12 +9,7 @@ import theme from './styles/theme';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-    <div>
-      <Router/>
-    </div>
-    </ThemeProvider>
-    
+    <Dashboard />
 
   );
 }
