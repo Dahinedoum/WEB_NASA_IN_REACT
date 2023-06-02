@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 
 // import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-
 import Dashboard from '../../views/Dashboard'
 // import Login from '../../views/Auth/Login'
 import Signup from '../../views/Auth/Signup'
