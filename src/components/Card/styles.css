@@ -1,15 +1,35 @@
 .cardContainer{
-   border: 2px solid gray;
-   border-radius: 4px;
+   border: 3px solid rgb(112, 112, 112);
+   border-radius: 8px;
    height: 24rem;
-   width: 20rem;
-   padding: 1rem;
+   width: 19rem;
    margin: 1rem;
+   transition: all 300ms ease;
+}
+.cardContainer:hover{
+   transform: translateY(-3%);
+   box-shadow: 3px 3px 8px rgb(103, 103, 103) ;
+}
 
+
+.cardContainer2{
+   background-color: rgba(255, 0, 0, 0.512);
+   border: 3px solid rgb(189, 9, 9);
+   border-radius: 8px;
+   height: 24rem;
+   width: 19rem;
+   margin: 1rem;
+   transition: all 300ms ease;
+}
+
+.cardContainer2:hover{
+   transform: translateY(-3%);
+   box-shadow: 3px 3px 8px rgb(147, 53, 53) ;
 }
 
 .cardContent {
-   padding: 16px;
+   padding: 26px;
+
 
 
 }
@@ -22,27 +42,37 @@
 
 .cardFooter{
    border-top: 2px solid gray;
-   align-items: center;
-   
+
 }
 
 
 .img {
+
+   border-radius: 25px;
    height: 16rem;
    width: 16rem;
-   padding-top:3rem;
+   padding-top:16px;
+   padding-bottom: 16px;
+   
+
 }
 
 
 .slider-container{
-   height: 43rem;
+   background-color: rgba(0, 0, 0, 0.211);
+   height: 30rem;
    overflow: hidden;
-   padding: 5rem;
-   border: 5px solid rgb(30, 165, 255);
+   /* padding: 2rem; */
+   border: 5px solid rgb(18, 106, 164);
+   border-radius: 16px;
+   display: flex;
+   align-items: center;
 }
 
 .slider{
+   /* border: 2px solid rgb(30, 165, 255); */
    display: flex;
    cursor: grab;
-   padding-top: 7rem;
+   /* height: 30rem; */
+
 }

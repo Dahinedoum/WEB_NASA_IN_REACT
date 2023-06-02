@@ -44,3 +44,19 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+<!-- Consumir la API de la NASA. -->
+<!-- Elegir una entidad para manipular (donde la NASA proporciona muchos datos). -->
+Crear una vista de panel de control (dashboard) para mostrar la lista de entidades.
+Crear una vista de detalle para cada entidad.
+Implementar una vista de inicio de sesión y registro utilizando Firebase para autenticación y protección de rutas.
+<!-- Guardar la información en el almacenamiento local (Local Storage). -->
+Implementar acciones para crear, editar y eliminar entidades en nuestro almacenamiento local.
+<!-- Implementar una acción para agregar entidades a favoritos en el almacenamiento local. -->
+Crear una vista de perfil del usuario que muestre el nombre, correo electrónico, teléfono y país, con un botón en la barra de navegación para acceder a los favoritos guardados.
+<!-- Utilizar GitHub para control de versiones. -->
+<!-- Utilizar Styled Components para estilos, y opcionalmente, usar bibliotecas como Material-UI. -->
+Agregar un botón para sincronizar nuevamente los datos de la API.
