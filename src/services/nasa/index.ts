@@ -1,13 +1,29 @@
+import { Photo, normalizePhoto, nasaPhotosResponse } from '../../models/Photo'
+import { getCachedNasaPhotos, setCachedNasaPhotos } from '../storage/Photos'
+
+export const getNasaPhotos = async (): Promise<Photo[]> => {
+  const savedPhotos = getCachedNasaPhotos()
 
 
 
-export const getNasaPhotos = async () => {
-   const response = await fetch(
-      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=r7xe5Kwk4h8obhAKGBPbQqYpEqvSGzEHhEUvuCGB`
-      )
-   const data = await response.json();
-   console.log({data: data.camera})
-};
+  if (!savedPhotos || savedPhotos.length <= 0) {
+    const response = await fetch(
+      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.REACT_APP_NASA_KEY}`
+
+    )
+
+    const data: nasaPhotosResponse = await response.json()
 
 
+    // if (data.status !== 'active') {
+    //   return []
+    // }
+    const mappedPhotos = data.photos.map(normalizePhoto)
+    setCachedNasaPhotos(mappedPhotos)
+    return mappedPhotos
 
+  }
+
+    return savedPhotos
+
+}
