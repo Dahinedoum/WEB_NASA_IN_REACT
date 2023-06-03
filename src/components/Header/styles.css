@@ -1,15 +1,22 @@
 .headerContainer {
-   height: 32px;
-
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgba(128, 128, 128, 0.5); 
+   padding: 16px;
 }
 
-.headerContent{
-background-color: rgb(14, 190, 190);
-padding: 16px;
-}
 
-.title{
-color: white;
-font-size: 24px;
-line-height: 1.2;
-}
+
+.logo {
+   height: 140px;
+   width: 350px; 
+   position: fixed;
+   top: 0;
+   left: -40px;
+  
+ }
+
+ .button{
+   margin-left: auto;
+ }

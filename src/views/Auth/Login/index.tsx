@@ -14,7 +14,7 @@ const Login: FC = () => {
     if (!loginError) {
       navigate('/landing')
     } else {
-      setError(loginError)
+      // setError(loginError)
     }
   }
   return (

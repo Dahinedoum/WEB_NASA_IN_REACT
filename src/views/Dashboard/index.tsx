@@ -5,8 +5,12 @@ import { getNasaPhotos } from '../../services/nasa'
 import './styles.css'
 import { Photo } from '../../models/Photo'
 import { motion } from 'framer-motion'
+import Footer from '../../components/Footer'
+import Button from '../../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Dashboard: FC = () => {
+
   const [photos, setPhotos] = useState<Photo[]>([])
 
   const [isLoading, setIsLoading] = useState(false)
@@ -29,7 +33,7 @@ const Dashboard: FC = () => {
   return (
     <div>
       <Header />
-
+      {/* <Button onClick={handleButtonClick}>Profile</Button> */}
       <div className="dashboardContent">
         <motion.div className="dashboardCard">
           <motion.div className="slider-container">
@@ -45,9 +49,9 @@ const Dashboard: FC = () => {
           </motion.div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   )
 }
 
 export default Dashboard
-

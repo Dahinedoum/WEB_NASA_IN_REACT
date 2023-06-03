@@ -1,16 +1,12 @@
 .dashboardContent{
-
-
-   margin-top: 78px;
-   padding: 16px;
-
+   padding: 32px;
+   background-color: rgb(188, 177, 177);
+   margin-top: 40px;
 }
 
 .dashboardCard{
    display: flex;
    flex-flow: row wrap;
    gap: 16px;
-
-
-
+   
 }

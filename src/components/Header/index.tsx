@@ -1,6 +1,6 @@
 import { FC, useCallback } from 'react'
-import './styles.css'
-import Button from '@mui/material/Button'
+import { HeaderContainer, HeaderContent } from './styles'
+import Button from '../Button'
 import { useNavigate } from 'react-router-dom'
 
 const Header: FC = () => {
@@ -9,17 +9,19 @@ const Header: FC = () => {
   const handleButtonClick = useCallback(() => {
     navigate('/login')
   }, [navigate])
+
+  const handleClick = useCallback(() => {
+    navigate('/profile')
+  }, [navigate])
   return (
-    <header className="headerContainer">
-      <div className="headerContent">
+    <HeaderContainer>
+      <HeaderContent>
         <img src="../logo.png" alt="Logo" className="logo" />
-      </div>
-      <div className="buttonContainer">
-        <Button className="button" variant="text" onClick={handleButtonClick}>
-          Rumbo hacía Marte
-        </Button>
-      </div>
-    </header>
+      </HeaderContent>
+
+      <Button onClick={handleButtonClick}>Login</Button>
+      <Button onClick={handleClick}>Profile</Button>
+    </HeaderContainer>
   )
 }
 
