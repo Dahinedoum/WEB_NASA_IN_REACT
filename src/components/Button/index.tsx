@@ -1,11 +1,12 @@
 import { FC, memo } from 'react'
 import type { Props } from './types'
 import "./styles.css"
+import {Container} from "./styles"
 
 const Button: FC<Props> = ({ children, onClick }) => {
-  return <button 
+  return <Container 
   onClick={onClick} className='button'>
-    {children}</button>
+    {children}</Container>
 }
 
 //CODIGO MUSTA 
