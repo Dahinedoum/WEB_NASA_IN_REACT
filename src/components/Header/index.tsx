@@ -1,14 +1,14 @@
 import { FC } from 'react'
-import "./styles.css"
-
+import { headerContainer, headerContent,title } from './styles'
 
 const Header: FC = () => {
   return (
-    <header className="headerContainer">
-      <div className='headerContent'>
-        <h2>Exploring Mars</h2>
-      </div>
-    </header>
+    
+    <headerContainer>
+      <headerContent>
+        <title>Exploring Mars</title>
+      </headerContent>
+    </headerContainer>
   )
 }
 

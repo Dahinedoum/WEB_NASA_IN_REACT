@@ -14,10 +14,6 @@ export const getNasaPhotos = async (): Promise<Photo[]> => {
 
     const data: nasaPhotosResponse = await response.json()
 
-
-    // if (data.status !== 'active') {
-    //   return []
-    // }
     const mappedPhotos = data.photos.map(normalizePhoto)
     setCachedNasaPhotos(mappedPhotos)
     return mappedPhotos

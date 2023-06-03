@@ -50,7 +50,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 <!-- Consumir la API de la NASA. -->
 <!-- Elegir una entidad para manipular (donde la NASA proporciona muchos datos). -->
+
 Crear una vista de panel de control (dashboard) para mostrar la lista de entidades.
+
 Crear una vista de detalle para cada entidad.
 Implementar una vista de inicio de sesión y registro utilizando Firebase para autenticación y protección de rutas.
 <!-- Guardar la información en el almacenamiento local (Local Storage). -->
