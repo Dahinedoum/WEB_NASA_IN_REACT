@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
 export type Props = {
-  children: ReactNode
+  children?: ReactNode
   onClick?: () => void
 }

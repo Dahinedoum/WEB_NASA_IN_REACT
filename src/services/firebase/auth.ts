@@ -5,10 +5,11 @@ import {
     signOut,
   } from 'firebase/auth'
   import app from './app'
+import { string } from 'yup'
   
   const firebaseAuth = getAuth(app)
   
-  export async function login(email: string, password: string) {
+  export async function login(values: {email: string, password: string}) {
     try {
       const credentials = await signInWithEmailAndPassword(
         firebaseAuth,
