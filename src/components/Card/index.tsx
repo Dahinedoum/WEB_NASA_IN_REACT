@@ -3,6 +3,8 @@ import './styles.css'
 import { Props } from './types'
 import Button from '../Button'
 import { addCachedNasaPhotos, addFavPhoto } from '../../services/storage/Photos'
+// import {cardContainer}
+
 
 const Card: FC<Props> = ({ photo, onRemove }) => {
   const [isClicked, setIsClicked] = useState(photo.isFav)
