@@ -11,6 +11,7 @@ import { string } from 'yup'
   
   export async function login(values: {email: string, password: string}) {
     try {
+      const { email, password } = values;
       const credentials = await signInWithEmailAndPassword(
         firebaseAuth,
         email,
