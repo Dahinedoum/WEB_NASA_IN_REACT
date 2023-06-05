@@ -1,14 +1,13 @@
 import { FC } from 'react'
-import './styles.css'
+import { VideoContainer, VideoBackground } from './styles'
 
-const Background: FC = () => {
+const Background = () => {
   return (
-    <div className="video-container">
-      <video autoPlay muted loop className="video-background">
+    <VideoContainer>
+      <VideoBackground autoPlay muted loop>
         <source src="../Background.mp4" type="video/mp4" />
-      </video>
-    </div>
+      </VideoBackground>
+    </VideoContainer>
   )
 }
-
 export default Background
