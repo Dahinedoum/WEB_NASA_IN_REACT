@@ -42,7 +42,7 @@
   //   width: 16rem;
   //   padding-top: 16px;
   //   padding-bottom: 16px;  
-`
+// `
 
 // export const slider-container = styled.div`
 //   background-color: rgba(0, 0, 0, 0.211);
