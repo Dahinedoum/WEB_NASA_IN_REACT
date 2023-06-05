@@ -2,7 +2,7 @@
 import { Children, FC, useCallback, useState } from 'react'
 import "./styles.css"
 import {Props} from "./types";
-import Button from '../Button';
+import {Button} from '../Button';
 import { FAV_PHOTOS, addFavPhoto } from '../../services/storage/Photos';
 
 

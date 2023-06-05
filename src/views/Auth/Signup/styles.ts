@@ -7,7 +7,7 @@ export const Form = styled.form`
   border: 1px solid;
   margin: 10rem auto;
   border-radius: 4px;
-  max-width: 15rem;
+  max-widht: 15rem;  
 `
 
 export const FormContent = styled.div`
@@ -30,15 +30,16 @@ export const Label = styled.label`
 `
 export const Input = styled.input``
 
+
 export const InputError = styled.span`
-  color: #e53935;
+  color: #E53935;
   font-size: 12px;
   line-height: 0.9;
   margin-top: 8px;
 `
 
 export const Link = styled(DefaultLink)`
-  color: #2f73d8;
+  color: #2F73D8 ;
   display: block;
   font-size: 14px;
   margin-top: 16px;
@@ -46,6 +47,6 @@ export const Link = styled(DefaultLink)`
   transition: color 200ms ease-in-out;
 
   &:hover {
-    color: #2f73d8;
+    color: #2F73D8;
   }
 `
