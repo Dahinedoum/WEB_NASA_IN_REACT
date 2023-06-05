@@ -15,3 +15,4 @@ export const validationLoginSchema = Yup.object().shape({
     .max(20, 'too long characters')
     .required('required'),
 })
+
