@@ -1,9 +1,8 @@
-import { Children, FC, useCallback, useState } from 'react'
-import './styles.css'
-import { Props } from './types'
-import Button from '../Button'
-import { addCachedNasaPhotos, addFavPhoto } from '../../services/storage/Photos'
-// import {cardContainer}
+import { FC, useCallback, useState } from 'react'
+import "./styles.css"
+import {Props} from "./types";
+import {Button} from '../Button';
+import { addFavPhoto } from '../../services/storage/Photos';
 
 
 const Card: FC<Props> = ({ photo, onRemove }) => {

@@ -1,4 +1,4 @@
-import { FC, memo, useCallback, useState } from 'react'
+import { FC, memo } from 'react'
 import {
   Container,
   Form,
@@ -8,31 +8,14 @@ import {
   InputError,
   Label,
 } from './styles'
-import Button from '../../../components/Button'
+import { Button } from '../../../components/Button'
 import { Formik } from 'formik'
 import { initialValues, validationLoginSchema } from './constant'
-import { login } from '../../../services/firebase/auth'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import useLogic from './logic'
 
 const Login: FC = () => {
-    const handleOnSubmit = useCallback((values: {email:string; password: string;}) => {
-        console.log(values)
-    }, [])
-
-
-
-  // const navigate = useNavigate()
-  // const [, setError] = useState<string | null>(null)
-  // const handleLogin = async (values: typeof initialValues) => {
-  //   const loginError = await login(values)
-  //   if (!loginError) {
-  //     navigate('/landing')
-  //   } else {
-  //     setError(loginError)
-  //   }
-  // }
-
-
+  const { handleOnSubmit} = useLogic()
 
   return (
     <Container>
@@ -62,8 +45,9 @@ const Login: FC = () => {
                 />
                 {errors?.password && <InputError>{errors.password}</InputError>}
               </InputController>
-              <Button type='submit' >
+              <Button type="submit" >
                 Login</Button>
+                <Link to="/signup">Crear cuenta</Link>
             </FormContent>
           </Form>
         )}
