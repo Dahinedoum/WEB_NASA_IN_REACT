@@ -6,7 +6,7 @@ export const initialValues = {
   password: '',
 }
 
-export const validationLoginSchema = Yup.object().shape({
+export const validationSignupSchema = Yup.object().shape({
   email: Yup.string()
     .email('Invalid email')
     .required('Please enter a valid email address'),
@@ -15,4 +15,3 @@ export const validationLoginSchema = Yup.object().shape({
     .max(20, 'too long characters')
     .required('required'),
 })
-

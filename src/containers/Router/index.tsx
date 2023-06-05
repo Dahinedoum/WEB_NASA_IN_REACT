@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 
+
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import Welcome from '../../views/Welcome'
@@ -9,6 +10,7 @@ import Signup from '../../views/Auth/Signup'
 
 const Router: FC = () => {
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path="/welcome" element={<Welcome />} />
@@ -19,6 +21,7 @@ const Router: FC = () => {
       </Routes>
     </BrowserRouter>
   )
+
 }
 
 export default Router

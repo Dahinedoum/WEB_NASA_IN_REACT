@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+
+
     "@emotion/react": "^11.11.0",
+
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -21,7 +24,6 @@
     "framer-motion": "^10.12.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.11",
@@ -54,7 +56,6 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26",
     "prettier": "2.8.8"
   }
 }

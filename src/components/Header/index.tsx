@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from 'react'
 import { HeaderContainer, Logo, ButtonContainer } from './styles'
-import Button from '../Button'
+import { Button } from '../Button'
 import Sidebar from '../Sidebar'
 import { useNavigate } from 'react-router-dom'
 

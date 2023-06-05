@@ -50,3 +50,4 @@ export const Link = styled(DefaultLink)`
     color: #2f73d8;
   }
 `
+
