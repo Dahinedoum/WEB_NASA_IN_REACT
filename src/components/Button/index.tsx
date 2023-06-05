@@ -6,4 +6,23 @@ const Button: FC<Props> = ({ children, onClick }) => {
   return <Container onClick={onClick}>{children} </Container>
 }
 
-export default Button
+//CODIGO MUSTA
+// const Button: FC<Props> = ({
+//   className,
+//   children,
+//   onClick,
+//   type = 'button',
+//   variant = 'primary',
+// }) => {
+//   return (
+//     <Container
+//       $variant={variant}
+//       className={className}
+//       type={type}
+//       onClick={onClick}
+//     >
+//       {children}
+//     </Container>
+//   )
+// }
+export default Button; 

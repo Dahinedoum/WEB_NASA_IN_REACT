@@ -1,7 +1,6 @@
 import { FC, useCallback, useState } from 'react'
 import { HeaderContainer, Logo, ButtonContainer } from './styles'
 import Button from '../Button'
-// import ProfileTab from '../ProfileTab'
 import Sidebar from '../Sidebar'
 import { useNavigate } from 'react-router-dom'
 
@@ -13,10 +12,6 @@ const Header: FC = () => {
   const handleButtonClick = useCallback(() => {
     navigate('/login')
   }, [navigate])
-
-  const handleProfileClick = useCallback(() => {
-    // setIsProfileOpen(true)
-  }, [])
 
   const handleClick2 = useCallback(() => {
     navigate('/#')
@@ -47,7 +42,7 @@ const Header: FC = () => {
 
   return (
     <HeaderContainer>
-      <Logo src="./Logo/logo.png" alt="" />
+      <Logo />
       {currentView === 'Dashboard' || (
         <ButtonContainer>{buttonToShow}</ButtonContainer>
       )}
@@ -56,18 +51,6 @@ const Header: FC = () => {
       {/* )} */}
     </HeaderContainer>
   )
-
-  // return (
-  //   <HeaderContainer>
-  //     <Logo src="./Logo/logo.png" alt="Logo" />
-  //     <ButtonContainer>
-  //       <Button>Login</Button>
-  //       <Button>Profile</Button>
-  //       <Button>Crear</Button>
-  //       <Button>Sincronizar</Button>
-  //     </ButtonContainer>
-  //   </HeaderContainer>
-  // )
 }
 
 export default Header

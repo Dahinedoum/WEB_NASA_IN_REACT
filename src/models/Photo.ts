@@ -23,12 +23,14 @@ export type nasaPhotosResponse = {
 photos: nasaPhotosImg[]
 }
 
+
 export const normalizePhoto = (input: nasaPhotosImg) => ({
    id: input?.id || "",
    image: input?.img_src || "",
    cameraName: input?.camera.full_name || "",
    status: input?.rover.status || "",
    earthDate: input?.earth_date || "",
+   isFav: false
 })
 
 
