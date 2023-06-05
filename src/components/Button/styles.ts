@@ -1,12 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-background-color: white;
-border: 2px solid gray;
+display: inline-block;
+padding: 10px 20px;
+background-color: #333;
+color: #fff;
+border: none;
 border-radius: 4px;
-padding: 8px 16px;
-height: 28px;
-width: 5rem;
-padding: 6px;
-margin: 10px;
+font-size: 16px;
+cursor: pointer;
+
+&:hover {
+  background-color: #555;
+}
+
+&:active {
+  background-color: #222;
+}
+
+&:focus {
+  outline: none;
+}
 `
+
+

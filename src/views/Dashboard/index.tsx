@@ -33,7 +33,7 @@ const Dashboard: FC = () => {
   return (
     <div>
       <Header />
-      {/* <Button onClick={handleButtonClick}>Profile</Button> */}
+     
       <div className="dashboardContent">
         <motion.div className="dashboardCard">
           <motion.div className="slider-container">

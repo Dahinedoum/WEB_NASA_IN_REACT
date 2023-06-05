@@ -15,7 +15,7 @@ const Router: FC = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/*" element={<Navigate replace to="/Dashboard" />} />
+        <Route path="/*" element={<Navigate replace to="/Welcome" />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,0 +1,30 @@
+
+  .nav-menu {
+    background-color: #333;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right 850ms;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+    transition: right 350ms;
+  }
+  
+  .menu-bars {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 2rem;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+  }
+  
