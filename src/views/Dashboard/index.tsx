@@ -2,9 +2,13 @@ import { FC, useCallback, useEffect, useState } from 'react'
 import Card from '../../components/Card'
 import Header from '../../components/Header'
 import { getNasaPhotos } from '../../services/nasa'
-import './styles.css'
+
 import { Photo } from '../../models/Photo'
 import { motion } from 'framer-motion'
+import {
+  getFavPhotos,
+  removeCachedNasaPhotos,
+} from '../../services/storage/Photos'
 
 const Dashboard: FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
@@ -12,7 +16,17 @@ const Dashboard: FC = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSetPhotos = useCallback(async () => {
-    const photosList = await getNasaPhotos()
+    let photosList = await getNasaPhotos()
+    const favPhotoList = await getFavPhotos()
+    photosList = photosList.map((photo) => {
+      const isFav = !!favPhotoList.find((favPhoto) => favPhoto.id === photo.id)
+
+      return {
+        ...photo,
+        isFav,
+      }
+    })
+
     setPhotos(photosList)
     setIsLoading(false)
   }, [])
@@ -21,6 +35,11 @@ const Dashboard: FC = () => {
     setIsLoading(true)
     handleSetPhotos()
   }, [handleSetPhotos])
+
+  const handleRemove = useCallback((photo: Photo) => {
+    const newList = removeCachedNasaPhotos(photo)
+    setPhotos(newList)
+  }, [])
 
   if (isLoading) {
     return <div>CARGANDO IMÁGENES...</div>
@@ -39,7 +58,7 @@ const Dashboard: FC = () => {
               dragConstraints={{ right: 0 }}
             >
               {photos.map((photo) => (
-                <Card key={photo.id} photo={photo} />
+                <Card key={photo.id} photo={photo} onRemove={handleRemove} />
               ))}
             </motion.div>
           </motion.div>
@@ -50,4 +69,3 @@ const Dashboard: FC = () => {
 }
 
 export default Dashboard
-
