@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { VideoContainer, VideoBackground } from './styles'
 
 const Background = () => {

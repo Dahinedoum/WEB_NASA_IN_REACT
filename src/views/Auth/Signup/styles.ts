@@ -4,14 +4,15 @@ import { Link as DefaultLink } from 'react-router-dom'
 export const Container = styled.div``
 
 export const Form = styled.form`
-  border: 1px solid;
+  border: none;
   margin: 10rem auto;
-  border-radius: 4px;
-  max-widht: 15rem;  
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 `
 
 export const FormContent = styled.div`
-  padding: 10px;
+  padding: 20px;
   background-color: #fff;
 `
 
@@ -25,28 +26,40 @@ export const InputController = styled.div`
 `
 
 export const Label = styled.label`
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 14px;
+  color: #2F73D8;
 `
-export const Input = styled.input``
 
+export const Input = styled.input`
+  padding: 10px;
+  border: 1px solid #2F73D8;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #2F73D8;
+  }
+`
 
 export const InputError = styled.span`
   color: #E53935;
-  font-size: 12px;
-  line-height: 0.9;
+  font-size: 14px;
   margin-top: 8px;
 `
 
 export const Link = styled(DefaultLink)`
-  color: #2F73D8 ;
+  color: #2F73D8;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 16px;
   text-align: center;
-  transition: color 200ms ease-in-out;
+  transition: color 0.3s ease;
 
   &:hover {
-    color: #2F73D8;
+    color: #555;
   }
 `

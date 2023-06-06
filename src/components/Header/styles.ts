@@ -6,12 +6,16 @@ const HeaderContainer = styled.div`
    align-items: center;
    background-color: rgba(128, 128, 128, 0.5);
    padding: 16px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
 `;
 
 const Logo = styled.img`
    height: 40px;
    width: 50px;
-   position: fixed;
+   position: absolute;
    top: 20px;
    left: 40px;
 `;
@@ -30,6 +34,6 @@ const Button = styled.button`
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
-`
+`;
 
 export { HeaderContainer, Logo, ButtonContainer, Button };

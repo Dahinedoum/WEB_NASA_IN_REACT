@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom'
 const Header: FC = () => {
   const navigate = useNavigate()
   const [currentView, setCurrentView] = useState('Welcome')
-  const [isProfileOpen, setIsProfileOpen] = useState(false)
 
   const handleButtonClick = useCallback(() => {
     navigate('/login')
@@ -29,26 +28,19 @@ const Header: FC = () => {
       <>
         <Button onClick={handleButtonClick}>Login</Button>
         <Sidebar />
-      </>
-    )
-  } else if (currentView === 'Dashboard') {
-    buttonToShow = (
-      <>
         <Button onClick={handleClick2}>Crear</Button>
         <Button onClick={handleClick3}>Sincronizar</Button>
       </>
     )
+  } else if (currentView === 'Dashboard') {
+    buttonToShow = <></>
   }
 
   return (
     <HeaderContainer>
       <Logo />
-      {currentView === 'Dashboard' || (
-        <ButtonContainer>{buttonToShow}</ButtonContainer>
-      )}
-      {/* {isProfileOpen && ( */}
-      {/* <ProfileTab>Contenido de la pestaña de perfil</ProfileTab> */}
-      {/* )} */}
+
+      <ButtonContainer>{buttonToShow}</ButtonContainer>
     </HeaderContainer>
   )
 }

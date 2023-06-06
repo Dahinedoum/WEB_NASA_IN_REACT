@@ -4,6 +4,11 @@ import { object, string, number, date } from 'yup'
 export const initialValues = {
   email: '',
   password: '',
+  nombre: '',
+  apellidos: '',
+  edad: 0,
+  pais: '',
+
 }
 
 export const validationSignupSchema = Yup.object().shape({

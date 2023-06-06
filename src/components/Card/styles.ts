@@ -1,4 +1,4 @@
-  // import styled from 'styled-components'
+  import styled from 'styled-components'
 
   // export const cardContainer = styled.div`
   //   border: 3px solid rgb(112, 112, 112);

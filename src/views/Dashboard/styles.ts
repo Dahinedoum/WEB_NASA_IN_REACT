@@ -1,12 +1,12 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const dashboardContent = styled.div`
-  margin-top: 78px;
+export const DashboardContent = styled.div`
+  margin-top: 100px;
   padding: 16px;
-`
+`;
 
-export const dashboardCard = styled.div`
+export const DashboardCard = styled.div`
   display: flex;
   flex-flow: row wrap;
   gap: 16px;
-`
+`;

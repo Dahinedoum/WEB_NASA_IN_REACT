@@ -8,3 +8,5 @@ export const Button: FC<Props> = ({ children, onClick }) => {
     </button>
   )
 }
+
+export default Button
