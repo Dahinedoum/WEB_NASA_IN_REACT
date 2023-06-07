@@ -11,23 +11,9 @@ export const getCachedNasaPhotos = (): Photo[] => {
 export const setCachedNasaPhotos = (photos: Photo[]) => {
   window.localStorage.setItem(NASA_PHOTO_ID, JSON.stringify(photos))
 }
-
-
-
-
-
-
-export const addCachedNasaPhotos = (photos: Photo) => {
-  const currentCachedPhotos = getCachedNasaPhotos()
-  const existingIndex = currentCachedPhotos.findIndex(
-    (item) => item.id === photos.id
-  )
-  if (existingIndex !== -1) {
-    currentCachedPhotos.splice(existingIndex, 1)
-  } else {
-    currentCachedPhotos.push(photos)
-  }
-  setCachedNasaPhotos(currentCachedPhotos)
+export const addNasaPhotoToCached = (photo:Photo) => {
+  const cachedPhotos = getCachedNasaPhotos()
+  setCachedNasaPhotos([...cachedPhotos, photo])
 }
 
 export const removeCachedNasaPhotos = (photos: Photo) => {
@@ -37,16 +23,10 @@ export const removeCachedNasaPhotos = (photos: Photo) => {
   )
   if (existingIndex !== -1) {
     currentCachedPhotos.splice(existingIndex, 1)
-  } 
+  }
   setCachedNasaPhotos(currentCachedPhotos)
   return currentCachedPhotos
 }
-
-
-
-
-
-
 
 export const getFavPhotos = (): Photo[] => {
   const response = window.localStorage.getItem(FAV_PHOTOS)
