@@ -12,6 +12,10 @@ const Header: FC = () => {
     navigate('/login')
   }, [navigate])
 
+  const handleLogout = useCallback(() => {
+    navigate('/login')
+  }, [navigate])
+
   const handleClick2 = useCallback(() => {
     navigate('/#')
   }, [navigate])
@@ -27,9 +31,10 @@ const Header: FC = () => {
     buttonToShow = (
       <>
         <Button onClick={handleButtonClick}>Login</Button>
+        <Button onClick={handleLogout}>Logout</Button>
         <Sidebar />
-        <Button onClick={handleClick2}>Crear</Button>
-        <Button onClick={handleClick3}>Sincronizar</Button>
+        <Button onClick={handleClick2}>Create</Button>
+        <Button onClick={handleClick3}>Synchronize </Button>
       </>
     )
   } else if (currentView === 'Dashboard') {

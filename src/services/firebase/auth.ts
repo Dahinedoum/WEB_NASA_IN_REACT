@@ -2,6 +2,7 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signOut,
 } from 'firebase/auth'
 import app from './app'
 
@@ -31,6 +32,14 @@ export async function signup(email: string, password: string) {
     )
 
     return credentials?.user ? credentials.user : null
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+export async function logout() {
+  try {
+    await signOut(firebaseAuth)
   } catch (err) {
     console.log(err)
   }

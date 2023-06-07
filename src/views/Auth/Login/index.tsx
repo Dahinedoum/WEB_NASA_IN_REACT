@@ -16,6 +16,7 @@ import useLogic from './logic'
 
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import Background from '../../../components/Background'
 
 const Login: FC = () => {
   const { handleOnSubmit } = useLogic()
@@ -23,6 +24,7 @@ const Login: FC = () => {
   return (
     <>
       <Header />
+      <Background />
       <Container>
         <Formik
           initialValues={initialValues}
@@ -49,7 +51,7 @@ const Login: FC = () => {
                   )}
                 </InputController>
                 <Button type="submit">Login</Button>
-                <Link to="/signup">Crear cuenta</Link>
+                <Link to="/signup">Create an account</Link>
               </FormContent>
             </Form>
           )}

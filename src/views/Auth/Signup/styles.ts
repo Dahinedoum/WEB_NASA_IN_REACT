@@ -14,6 +14,7 @@ export const Form = styled.form`
 export const FormContent = styled.div`
   padding: 20px;
   background-color: #fff;
+  border-radius: 10px;
 `
 
 export const InputController = styled.div`
