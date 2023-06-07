@@ -1,12 +1,18 @@
-import { FC, useCallback, useState } from 'react'
+import { FC, useCallback, useEffect, useState } from 'react'
 import { HeaderContainer, Logo, ButtonContainer } from './styles'
 import { Button } from '../Button'
 import Sidebar from '../Sidebar'
 import { useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const Header: FC = () => {
   const navigate = useNavigate()
-  const [currentView, setCurrentView] = useState('Welcome')
+  const [currentView, setCurrentView] = useState('')
+  const location = useLocation()
+
+  useEffect(() => {
+    setCurrentView(location.pathname)
+  }, [location])
 
   const handleButtonClick = useCallback(() => {
     navigate('/login')
@@ -27,18 +33,21 @@ const Header: FC = () => {
 
   let buttonToShow = null
 
-  if (currentView === 'Welcome') {
+  if (currentView === '/Welcome') {
     buttonToShow = (
       <>
         <Button onClick={handleButtonClick}>Login</Button>
+      </>
+    )
+  } else if (currentView === '/dashboard') {
+    buttonToShow = (
+      <>
         <Button onClick={handleLogout}>Logout</Button>
         <Sidebar />
         <Button onClick={handleClick2}>Create</Button>
         <Button onClick={handleClick3}>Synchronize </Button>
       </>
     )
-  } else if (currentView === 'Dashboard') {
-    buttonToShow = <></>
   }
 
   return (
