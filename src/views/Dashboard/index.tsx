@@ -9,6 +9,7 @@ import {
   getFavPhotos,
   removeCachedNasaPhotos,
 } from '../../services/storage/Photos'
+import NewCard from '../../components/newCard/newCard'
 
 const Dashboard: FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
@@ -48,6 +49,7 @@ const Dashboard: FC = () => {
   return (
     <div>
       <Header />
+      <NewCard />
 
       <div className="dashboardContent">
         <motion.div className="dashboardCard">

@@ -18,40 +18,6 @@ export const FormContent = styled.div`
   border-radius: 10px;
 `
 
-export const InputController = styled.div`
-  display: flex;
-  flex-flow: column;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-`
-
-export const Label = styled.label`
-  font-size: 18px;
-  margin-bottom: 14px;
-  color: #2F73D8;
-`
-
-export const Input = styled.input`
-  padding: 10px;
-  border: 1px solid #2F73D8;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #333;
-  transition: border-color 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-color: #2F73D8;
-  }
-`
-
-export const InputError = styled.span`
-  color: #E53935;
-  font-size: 14px;
-  margin-top: 8px;
-`
 
 export const Link = styled(DefaultLink)`
   color: #2F73D8;
