@@ -1,5 +1,5 @@
 import * as Yup from 'yup'
-import { object, string, number, date } from 'yup'
+// import { object, string, number, date } from 'yup'
 
 export const initialValues = {
   email: '',
@@ -15,3 +15,4 @@ export const validationLoginSchema = Yup.object().shape({
     .max(20, 'too long characters')
     .required('required'),
 })
+

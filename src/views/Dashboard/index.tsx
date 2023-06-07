@@ -2,7 +2,7 @@ import { FC, useCallback, useEffect, useState } from 'react'
 import Card from '../../components/Card'
 import Header from '../../components/Header'
 import { getNasaPhotos } from '../../services/nasa'
-
+import Footer from '../../components/Footer'
 import { Photo } from '../../models/Photo'
 import { motion } from 'framer-motion'
 import {
@@ -66,6 +66,7 @@ const Dashboard: FC = () => {
           </motion.div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   )
 }

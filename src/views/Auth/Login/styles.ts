@@ -5,28 +5,31 @@ import { Link as DefaultLink } from 'react-router-dom'
 export const Container = styled.div``
 
 export const Form = styled.form`
-  border: 1px solid;
+  border: none;
   margin: 10rem auto;
-  border-radius: 4px;
-  max-width: 15rem;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 `
 
 export const FormContent = styled.div`
-  padding: 10px;
+  padding: 20px;
   background-color: #fff;
+  border-radius: 10px;
 `
 
 
 export const Link = styled(DefaultLink)`
-  color: #2f73d8;
+  color: #2F73D8;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 16px;
   text-align: center;
-  transition: color 200ms ease-in-out;
+  transition: color 0.3s ease;
 
   &:hover {
-    color: #2f73d8;
+    color: #555;
   }
 `
+
 
