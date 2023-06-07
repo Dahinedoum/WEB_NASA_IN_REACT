@@ -6,6 +6,7 @@ import Footer from '../../components/Footer'
 import { Photo } from '../../models/Photo'
 import { motion } from 'framer-motion'
 import {
+  getCachedNasaPhotos,
   getFavPhotos,
   removeCachedNasaPhotos,
 } from '../../services/storage/Photos'
@@ -13,7 +14,6 @@ import NewCard from '../../components/newCard/newCard'
 
 const Dashboard: FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
-
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSetPhotos = useCallback(async () => {
@@ -42,6 +42,11 @@ const Dashboard: FC = () => {
     setPhotos(newList)
   }, [])
 
+  const handleOnCompleteCreations = useCallback(() => {
+    const currentCachedApods = getCachedNasaPhotos()
+    setPhotos(currentCachedApods)
+  }, [])
+
   if (isLoading) {
     return <div>CARGANDO IMÁGENES...</div>
   }
@@ -49,7 +54,7 @@ const Dashboard: FC = () => {
   return (
     <div>
       <Header />
-      <NewCard />
+      <NewCard onCompleteCreations={handleOnCompleteCreations} />
 
       <div className="dashboardContent">
         <motion.div className="dashboardCard">
