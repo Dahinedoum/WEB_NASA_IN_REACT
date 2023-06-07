@@ -4,9 +4,11 @@ import './styles.css'
 import { IconContext } from 'react-icons'
 import { Link } from 'react-router-dom'
 import Button from '../Button'
+import { getCachedUserInfo } from '../../services/storage/user'
 
 const Navbar: FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const userInfo = getCachedUserInfo()
 
   const showSidebar = () => {
     setSidebarOpen(!sidebarOpen)
@@ -25,6 +27,7 @@ const Navbar: FC = () => {
               <AiIcons.AiOutlineClose />
             </Link>
           </ul>
+          <div style={{ color: 'white' }}>{userInfo.email}</div>
         </nav>
       </IconContext.Provider>
     </>
