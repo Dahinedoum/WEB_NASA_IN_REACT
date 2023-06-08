@@ -19,11 +19,12 @@ const Dashboard: FC = () => {
   const handleSetPhotos = useCallback(async () => {
     let photosList = await getNasaPhotos()
     const favPhotoList = await getFavPhotos()
-    photosList = photosList.map((photo) => {
+    photosList = photosList.map((photo, index) => {
       const isFav = !!favPhotoList.find((favPhoto) => favPhoto.id === photo.id)
 
       return {
         ...photo,
+        position: index,
         isFav,
       }
     })
