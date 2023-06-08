@@ -1,9 +1,10 @@
 import { FC, useCallback, useEffect, useState } from 'react'
-import { HeaderContainer, Logo, ButtonContainer } from './styles'
+import { HeaderContainer, ButtonContainer } from './styles'
 import { Button } from '../Button'
 import Sidebar from '../Sidebar'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
+import Logos from '../Logo'
 
 const Header: FC = () => {
   const navigate = useNavigate()
@@ -52,7 +53,7 @@ const Header: FC = () => {
 
   return (
     <HeaderContainer>
-      <Logo />
+      <Logos />
 
       <ButtonContainer>{buttonToShow}</ButtonContainer>
     </HeaderContainer>
