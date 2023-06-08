@@ -13,7 +13,7 @@ const Header: FC = () => {
   }, [navigate])
 
   const handleLogout = useCallback(() => {
-    navigate('/login')
+    navigate('/Welcome')
   }, [navigate])
 
   const handleClick2 = useCallback(() => {
