@@ -1,4 +1,4 @@
-import { FC, useState, useCallback } from 'react'
+import { FC, useCallback } from 'react'
 import Button from '../Button'
 import { Formik } from 'formik'
 import { validationNewCardSchema, initialValues } from './constant'
