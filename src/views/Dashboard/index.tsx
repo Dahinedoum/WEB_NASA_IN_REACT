@@ -58,7 +58,7 @@ const Dashboard: FC = () => {
       <Header />
       <NewCard onCompleteCreations={handleOnCompleteCreations} />
       <BackgroundImage
-        src="../DashBackground.jpg"
+        src="../marte.jpeg"
         alt="DashBackground"
         className="backgroundImage"
       />

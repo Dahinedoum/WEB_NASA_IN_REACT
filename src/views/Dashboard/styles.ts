@@ -13,6 +13,10 @@ export const DashboardCard = styled.div`
   gap: 16px;
 `;
 export const BackgroundImage = styled.img`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  z-index: -1;
 `;
