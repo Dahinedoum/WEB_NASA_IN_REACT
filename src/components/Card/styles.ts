@@ -52,9 +52,8 @@ color: black;
     
   `
 
-//   export const Img = styled.image`
-//   border-radius: 25px;
-//   height: 16rem;
-//   width: 16rem;
-//   padding-top: 16px; 
-// `
+  export const RiDeleteBin2Fill = styled.image`
+  position: fixed;
+`
+
+

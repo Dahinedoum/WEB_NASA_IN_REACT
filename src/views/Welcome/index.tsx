@@ -11,13 +11,12 @@ const Welcome: FC = () => {
       <div className="background-container">
         <Background />
         <div className="welcome-box">
-          <h1>¡Hola!</h1>
           <p>
-            Te damos la bienvenida a nuestra increíble App. En un mundo al borde
-            del colapso, hemos emprendido una misión: salvar el mundo. ¿Cómo?
-            Prepárate para embarcarte en una emocionante aventura mientras te
-            sumerges en el vasto y maravilloso universo que nos rodea. ¡La
-            salvación del mundo comienza aquí, en Exploring Mars!
+            Welcome to our amazing App. In a world on the brink of collapse, we
+            have embarked on a mission: to save the world. How? Get ready to
+            embark on an exciting adventure as you dive into the vast and
+            marvelous universe that surrounds us. The salvation of the world
+            starts here, at Exploring Mars!
           </p>
         </div>
       </div>

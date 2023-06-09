@@ -50,14 +50,14 @@ color: rgba(2, 8, 8, 0);
 }
 
 .hearth{
-  color: rgba(255, 0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-right: 8px;
-  font-size: 15px;
+  font-size: 18px;
 }
 .hearth2{
   color: rgb(255, 0, 0);
-  margin-right: 8px;
-  font-size: 15px;
+  margin-right: px;
+  font-size: 20px;
   
 }
 
@@ -67,5 +67,7 @@ color: rgba(2, 8, 8, 0);
   width: 16rem;
   padding-top: 16px;
 }
+
+
 
 

@@ -4,7 +4,7 @@ export const Boton = styled.button`
   display: inline-block;
   margin: 2px;
   margin-bottom: 7px;
-  background-color: #4caf4fb4;
+  background-color: rgb(124, 124, 124);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -24,7 +24,7 @@ export const Boton = styled.button`
 
   &:active {
     background-color: #3e8e41;
-    transform: scale(0.95);
+    transform: scale(0.80);
   }
 
   &:focus {

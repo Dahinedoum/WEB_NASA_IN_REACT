@@ -1,10 +1,12 @@
 import { FC, useCallback, useState } from 'react'
 import './styles.css'
-import {CardContent, CardHeader, CardFooter} from "./styles"
+import {CardContent, CardHeader, CardFooter, } from "./styles"
 import { Props } from './types'
 import { Button } from '../Button'
 import { addFavPhoto } from '../../services/storage/Photos'
 import { FaHeart } from 'react-icons/fa';
+import { RiDeleteBin2Fill } from 'react-icons/ri'
+
 const Card: FC<Props> = ({ photo, onRemove }) => {
   
   const [isClicked, setIsClicked] = useState(photo.isFav)
@@ -43,9 +45,9 @@ const handleDetails = () => {
         
         <CardHeader>{photo.cameraName}
               <br />
-              <FaHeart className={hearthClass} />
-              <Button onClick={handleOnClick} >FAV</Button>    
-              <Button onClick={() => onRemove(photo)}>Delete</Button>
+
+              <Button onClick={handleOnClick} >       <FaHeart className={hearthClass} /></Button>    
+              <Button onClick={() => onRemove(photo)}> <RiDeleteBin2Fill className='delete' /> </Button>
               <Button onClick={handleDetails}>Details</Button>
 
               <CardFooter>

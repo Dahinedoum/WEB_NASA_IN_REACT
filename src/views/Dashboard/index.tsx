@@ -11,7 +11,7 @@ import {
   removeCachedNasaPhotos,
 } from '../../services/storage/Photos'
 import NewCard from '../../components/newCard/newCard'
-import {DashboardBack, SliderContainer, DashboardContent, DashboardCard} from "./styles"
+import {DashboardBack, SliderContainer, DashboardContent, DashboardCard, BackgroundImage} from "./styles"
 import "./styles.css"
 
 const Dashboard: FC = () => {
@@ -55,11 +55,23 @@ const Dashboard: FC = () => {
   }
 
   return (
+    
     <DashboardBack>
+
+
+
       <Header />
       {/* <NewCard onCompleteCreations={handleOnCompleteCreations} /> */}
 
+
+
       <DashboardContent>
+        
+      <BackgroundImage
+        src="../marte.jpeg"
+        alt="DashBackground"
+        className="backgroundImage"
+      />
         <DashboardCard>
           <SliderContainer>
             <motion.div className="slider"
