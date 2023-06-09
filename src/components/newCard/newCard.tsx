@@ -53,7 +53,7 @@ const NewCard: FC<Props> = ({ onCompleteCreations }) => {
               {errors?.image && <InputError>{errors.image}</InputError>}
             </InputController>
 
-            <Button type="submit">Añadir</Button>
+            <Button type="submit">Add</Button>
           </form>
         </div>
       )}
