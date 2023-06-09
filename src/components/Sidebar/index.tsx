@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import {FC, memo, useState} from 'react'
 import * as AiIcons from 'react-icons/ai'
 import './styles.css'
 import { IconContext } from 'react-icons'
@@ -34,4 +34,4 @@ const Navbar: FC = () => {
   )
 }
 
-export default Navbar
+export default memo(Navbar)

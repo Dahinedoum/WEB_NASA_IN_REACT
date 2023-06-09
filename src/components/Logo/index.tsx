@@ -1,6 +1,7 @@
-import { Logo } from './styles'
+import { Container } from './styles'
+import { memo } from 'react'
 
-const Logos = () => {
-  return <Logo src="../logo.png" />
+const Logo = () => {
+  return <Container src="../logo.png" />
 }
-export default Logos
+export default memo(Logo)

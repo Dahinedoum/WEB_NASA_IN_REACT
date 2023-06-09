@@ -11,8 +11,14 @@ import {
   removeCachedNasaPhotos,
 } from '../../services/storage/Photos'
 import NewCard from '../../components/newCard/newCard'
-import {DashboardBack, SliderContainer, DashboardContent, DashboardCard, BackgroundImage} from "./styles"
-import "./styles.css"
+import {
+  DashboardBack,
+  SliderContainer,
+  DashboardContent,
+  DashboardCard,
+  BackgroundImage,
+} from './styles'
+import './styles.css'
 
 const Dashboard: FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
@@ -20,7 +26,7 @@ const Dashboard: FC = () => {
 
   const handleSetPhotos = useCallback(async () => {
     let photosList = await getNasaPhotos()
-    const favPhotoList = await getFavPhotos()
+    const favPhotoList = getFavPhotos()
     photosList = photosList.map((photo, index) => {
       const isFav = !!favPhotoList.find((favPhoto) => favPhoto.id === photo.id)
 
@@ -55,28 +61,21 @@ const Dashboard: FC = () => {
   }
 
   return (
-    
     <DashboardBack>
-
-
-
       <Header />
-      
-
-
-
       <DashboardContent>
-        
-      <BackgroundImage
-        src="../marte.jpeg"
-        alt="DashBackground"
-        className="backgroundImage"
-      />
+        <BackgroundImage
+          src="../marte.jpeg"
+          alt="DashBackground"
+          className="backgroundImage"
+        />
         <DashboardCard>
           <SliderContainer>
-            <motion.div className="slider"
+            <motion.div
+              className="slider"
               drag="x"
-              dragConstraints={{ right: 0 }}>
+              dragConstraints={{ right: 0 }}
+            >
               {photos.map((photo) => (
                 <Card key={photo.id} photo={photo} onRemove={handleRemove} />
               ))}

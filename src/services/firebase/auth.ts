@@ -5,7 +5,7 @@ import {
   signOut,
 } from 'firebase/auth'
 import app from './app'
-import { setCachedUserInfo } from '../storage/user';
+import { setCachedUserInfo } from '../storage/user'
 
 const firebaseAuth = getAuth(app)
 
@@ -17,16 +17,13 @@ export async function login(values: { email: string; password: string }) {
       email,
       password
     )
-    console.log(credentials)
-    const user= credentials?.user ? credentials.user : null
+    const user = credentials?.user ? credentials.user : null
     setCachedUserInfo(user)
     return user
-    } catch (err) {
+  } catch (err) {
     console.log(err)
   }
 }
-
-
 
 export async function signup(email: string, password: string) {
   try {
@@ -36,8 +33,7 @@ export async function signup(email: string, password: string) {
       password
     )
 
-    console.log(credentials)
-    const user= credentials?.user ? credentials.user : null
+    const user = credentials?.user ? credentials.user : null
     setCachedUserInfo(user)
     return user
   } catch (err) {
