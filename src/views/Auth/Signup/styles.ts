@@ -1,66 +1,50 @@
-import styled from 'styled-components'
-import { Link as DefaultLink } from 'react-router-dom'
+import styled from 'styled-components';
 
-export const Container = styled.div``
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
 
 export const Form = styled.form`
-  border: none;
-  margin: 10rem auto;
-  border-radius: 10px;
-  max-width: 400px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const FormContent = styled.div`
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`;
 
 export const InputController = styled.div`
   display: flex;
-  flex-flow: column;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-`
+  flex-direction: column;
+  margin-bottom: 10px;
+`;
 
 export const Label = styled.label`
-  font-size: 18px;
-  margin-bottom: 14px;
-  color: #2F73D8;
-`
+  color: orange;
+  font-size: 16px;
+  margin-bottom: 5px;
+`;
 
 export const Input = styled.input`
+  width: 300px;
   padding: 10px;
-  border: 1px solid #2F73D8;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
-  color: #333;
-  transition: border-color 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-color: #2F73D8;
-  }
-`
+  font-size: 14px;
+  margin-bottom: 5px;
+`;
 
 export const InputError = styled.span`
-  color: #E53935;
-  font-size: 14px;
-  margin-top: 8px;
-`
+  font-size: 12px;
+  color: red;
+  margin-top: 2px;
+`;
 
-export const Link = styled(DefaultLink)`
-  color: #2F73D8;
-  display: block;
-  font-size: 16px;
-  margin-top: 16px;
-  text-align: center;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #555;
-  }
-`

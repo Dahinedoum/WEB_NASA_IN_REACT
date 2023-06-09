@@ -1,4 +1,13 @@
-import { FC, memo, useCallback, useState } from 'react'
+import { FC, memo } from 'react'
+// import {
+//   Container,
+//   Form,
+//   FormContent,
+//   Input,
+//   InputController,
+//   InputError,
+//   Label,
+// } from './styles'
 import {
   Container,
   Form,
@@ -7,14 +16,14 @@ import {
   InputController,
   InputError,
   Label,
-} from './styles'
+} from './styles';
+
 import { Button } from '../../../components/Button'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import { Formik } from 'formik'
 import { initialValues, validationSignupSchema } from './constant'
 import useLogic from './logic'
-import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Background from '../../../components/Background'
 
