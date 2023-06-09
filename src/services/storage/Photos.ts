@@ -11,9 +11,9 @@ export const getCachedNasaPhotos = (): Photo[] => {
 export const setCachedNasaPhotos = (photos: Photo[]) => {
   window.localStorage.setItem(NASA_PHOTO_ID, JSON.stringify(photos))
 }
-export const addNasaPhotoToCached = (photo:Photo) => {
+export const addNasaPhotoToCached = (photo: Photo) => {
   const cachedPhotos = getCachedNasaPhotos()
-  setCachedNasaPhotos([...cachedPhotos, photo])
+  setCachedNasaPhotos([photo, ...cachedPhotos])
 }
 
 export const removeCachedNasaPhotos = (photos: Photo) => {

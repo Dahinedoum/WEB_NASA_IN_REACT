@@ -13,7 +13,9 @@
 
 import { FC } from 'react'
 import type { Props } from './types'
+
 import buttonStyle from './styles'
+
 
 export const Button: FC<Props> = ({ children, onClick }) => {
   return (
