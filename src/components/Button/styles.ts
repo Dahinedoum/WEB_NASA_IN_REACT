@@ -10,7 +10,7 @@ export const Boton = styled.button`
   border-radius: 5px;
   height:30px;
   width:auto;
-  font-size: 2px;
+  font-size: 2.5vh;
   cursor: pointer;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
