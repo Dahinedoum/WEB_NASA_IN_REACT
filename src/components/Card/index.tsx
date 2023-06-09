@@ -3,6 +3,8 @@ import './styles.css'
 import { Props } from './types'
 import { Button } from '../Button'
 import { addFavPhoto } from '../../services/storage/Photos'
+import { GrFavorite } from 'react-icons/gr'
+import { RiDeleteBin2Fill } from 'react-icons/ri'
 
 const Card: FC<Props> = ({ photo, onRemove }) => {
   const [isClicked, setIsClicked] = useState(photo.isFav)
@@ -16,8 +18,12 @@ const Card: FC<Props> = ({ photo, onRemove }) => {
     <div className={`cardContainer ${isClicked ? 'cardContainer2' : ''}`}>
       <div className="cardContent">
         <div className="cardHeader">{photo.cameraName}</div>
-        <Button onClick={handleOnClick}>FAV</Button>
-        <Button onClick={() => onRemove(photo)}>ELIMINAR</Button>
+        <Button onClick={handleOnClick}>
+          <GrFavorite />
+        </Button>
+        <Button onClick={() => onRemove(photo)}>
+          <RiDeleteBin2Fill />
+        </Button>
         <div className="cardFooter">
           <img src={photo.image} alt="#" className="img" />
         </div>
