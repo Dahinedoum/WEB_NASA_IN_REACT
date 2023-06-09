@@ -1,29 +1,15 @@
-// import { FC } from 'react'
-// import type { Props } from './types'
-
-// export const Button: FC<Props> = ({ children, onClick }) => {
-//   return (
-//     <button onClick={onClick} className="button">
-//       {children}
-//     </button>
-//   )
-// }
-
-// export default Button
-
 import { FC } from 'react'
 import type { Props } from './types'
+import {Boton} from "./styles"
 
-import buttonStyle from './styles'
 
 
 export const Button: FC<Props> = ({ children, onClick }) => {
   return (
-    <button onClick={onClick} className={`button ${buttonStyle}`}>
+    <Boton onClick={onClick} >
       {children}
-    </button>
+    </Boton>
   )
 }
 
 export default Button
-

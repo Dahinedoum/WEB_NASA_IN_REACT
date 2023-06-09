@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import Router from './containers/Router'
 import { ThemeProvider } from 'styled-components'
 import theme from './styles/theme'

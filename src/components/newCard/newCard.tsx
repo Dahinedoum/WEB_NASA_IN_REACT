@@ -29,6 +29,7 @@ const NewCard: FC<Props> = ({ onCompleteCreations }) => {
       initialValues={initialValues}
       validationSchema={validationNewCardSchema}
       onSubmit={handleOnSubmit}
+      class
     >
       {({ handleSubmit, errors, handleChange }) => (
         <div className="cardContainer">

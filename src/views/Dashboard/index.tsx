@@ -11,7 +11,14 @@ import {
   removeCachedNasaPhotos,
 } from '../../services/storage/Photos'
 import NewCard from '../../components/newCard/newCard'
-import { BackgroundImage } from './styles'
+import {
+  DashboardBack,
+  SliderContainer,
+  DashboardContent,
+  DashboardCard,
+  BackgroundImage,
+} from './styles'
+import './styles.css'
 
 const Dashboard: FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
@@ -19,7 +26,7 @@ const Dashboard: FC = () => {
 
   const handleSetPhotos = useCallback(async () => {
     let photosList = await getNasaPhotos()
-    const favPhotoList = await getFavPhotos()
+    const favPhotoList = getFavPhotos()
     photosList = photosList.map((photo, index) => {
       const isFav = !!favPhotoList.find((favPhoto) => favPhoto.id === photo.id)
 
@@ -54,17 +61,16 @@ const Dashboard: FC = () => {
   }
 
   return (
-    <div>
+    <DashboardBack>
       <Header />
-      <NewCard onCompleteCreations={handleOnCompleteCreations} />
-      <BackgroundImage
-        src="../marte.jpeg"
-        alt="DashBackground"
-        className="backgroundImage"
-      />
-      <div className="dashboardContent">
-        <motion.div className="dashboardCard">
-          <motion.div className="slider-container">
+      <DashboardContent>
+        <BackgroundImage
+          src="../marte.jpeg"
+          alt="DashBackground"
+          className="backgroundImage"
+        />
+        <DashboardCard>
+          <SliderContainer>
             <motion.div
               className="slider"
               drag="x"
@@ -74,11 +80,12 @@ const Dashboard: FC = () => {
                 <Card key={photo.id} photo={photo} onRemove={handleRemove} />
               ))}
             </motion.div>
-          </motion.div>
-        </motion.div>
-      </div>
+          </SliderContainer>
+          <NewCard onCompleteCreations={handleOnCompleteCreations} />
+        </DashboardCard>
+      </DashboardContent>
       <Footer />
-    </div>
+    </DashboardBack>
   )
 }
 

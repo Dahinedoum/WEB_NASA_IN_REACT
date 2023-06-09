@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Logo = styled.img`
+export const Container = styled.img`
    height: 100px; 
    width: auto; 
    position: fixed;
@@ -11,5 +11,3 @@ const Logo = styled.img`
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
    background-color: rgba(128, 128, 100, 0.4);
 `;
-
-export { Logo };

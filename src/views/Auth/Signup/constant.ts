@@ -1,5 +1,4 @@
 import * as Yup from 'yup'
-import { object, string, number, date } from 'yup'
 
 export const initialValues = {
   email: '',

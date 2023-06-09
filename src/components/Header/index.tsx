@@ -1,15 +1,11 @@
-import { FC, useCallback, useEffect, useState } from 'react'
-import { HeaderContainer, ButtonContainer } from './styles'
-import { Button } from '../Button'
-import Sidebar from '../Sidebar'
-import { useNavigate } from 'react-router-dom'
-
+import { FC, memo, useCallback, useEffect, useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { setCachedNasaPhotos } from '../../services/storage/Photos'
 import { Photo, nasaPhotosResponse, normalizePhoto } from '../../models/Photo'
-
-import { useLocation } from 'react-router-dom'
+import { Button } from '../Button'
+import Sidebar from '../Sidebar'
 import Logos from '../Logo'
-
+import { HeaderContainer, ButtonContainer } from './styles'
 
 const Header: FC = () => {
   const navigate = useNavigate()
@@ -20,26 +16,17 @@ const Header: FC = () => {
     setCurrentView(location.pathname)
   }, [location])
 
-
   const synchronizeNasaPhotos = async (): Promise<Photo[]> => {
     const response = await fetch(
       `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.REACT_APP_NASA_KEY}`
-    );
-  
-    const data: nasaPhotosResponse = await response.json();
-  
-    const mappedPhotos = data.photos.map(normalizePhoto);
-    setCachedNasaPhotos(mappedPhotos);
-    return mappedPhotos;
-  };
+    )
 
+    const data: nasaPhotosResponse = await response.json()
 
-
-
-
-
-
-
+    const mappedPhotos = data.photos.map(normalizePhoto)
+    setCachedNasaPhotos(mappedPhotos)
+    return mappedPhotos
+  }
 
   const handleButtonClick = useCallback(() => {
     navigate('/login')
@@ -49,18 +36,16 @@ const Header: FC = () => {
     navigate('/Welcome')
   }, [navigate])
 
-  const handleClick2 = useCallback(() => {
-    navigate('/#')
-  }, [navigate])
+  const handleOnClick2 = useCallback(() => {}, [])
 
   const handleClick3 = useCallback(async () => {
     try {
-      await synchronizeNasaPhotos();
-      console.log('Sincronizado');
+      await synchronizeNasaPhotos()
+      console.log('Sincronizado')
     } catch (error) {
-      console.error('Error al sincronizar', error);
+      console.error('Error al sincronizar', error)
     }
-  }, []);
+  }, [])
 
   let buttonToShow = null
 
@@ -75,7 +60,7 @@ const Header: FC = () => {
       <>
         <Button onClick={handleLogout}>Logout</Button>
         <Sidebar />
-        <Button onClick={handleClick2}>Create</Button>
+        <Button onClick={handleOnClick2}>Create</Button>
         <Button onClick={handleClick3}>Synchronize </Button>
       </>
     )
@@ -90,4 +75,4 @@ const Header: FC = () => {
   )
 }
 
-export default Header
+export default memo(Header)
