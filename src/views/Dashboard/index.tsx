@@ -61,7 +61,7 @@ const Dashboard: FC = () => {
 
 
       <Header />
-      {/* <NewCard onCompleteCreations={handleOnCompleteCreations} /> */}
+      
 
 
 
@@ -82,6 +82,7 @@ const Dashboard: FC = () => {
               ))}
             </motion.div>
           </SliderContainer>
+          <NewCard onCompleteCreations={handleOnCompleteCreations} />
         </DashboardCard>
       </DashboardContent>
       <Footer />

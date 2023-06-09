@@ -39,9 +39,13 @@ const Header: FC = () => {
     navigate('/login')
   }, [navigate])
 
-  const handleClick2 = useCallback(() => {
-    navigate('/#')
-  }, [navigate])
+
+
+  const handleOnClick2 = useCallback(() => {
+
+  }, []);
+
+
 
   const handleClick3 = useCallback(async () => {
     try {
@@ -60,7 +64,7 @@ const Header: FC = () => {
         <Button onClick={handleButtonClick}>Login</Button>
         <Button onClick={handleLogout}>Logout</Button>
         <Sidebar />
-        <Button onClick={handleClick2}>Create</Button>
+        <Button onClick={handleOnClick2}>Create</Button>
         <Button onClick={handleClick3}>Synchronize </Button>
       </>
     )
@@ -78,3 +82,7 @@ const Header: FC = () => {
 }
 
 export default Header
+function setIsClicked(arg0: boolean) {
+  throw new Error('Function not implemented.')
+}
+
