@@ -11,6 +11,8 @@ import {
   removeCachedNasaPhotos,
 } from '../../services/storage/Photos'
 import NewCard from '../../components/newCard/newCard'
+import {DashboardBack, SliderContainer, DashboardContent, DashboardCard} from "./styles"
+import "./styles.css"
 
 const Dashboard: FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
@@ -53,27 +55,25 @@ const Dashboard: FC = () => {
   }
 
   return (
-    <div>
+    <DashboardBack>
       <Header />
-      <NewCard onCompleteCreations={handleOnCompleteCreations} />
+      {/* <NewCard onCompleteCreations={handleOnCompleteCreations} /> */}
 
-      <div className="dashboardContent">
-        <motion.div className="dashboardCard">
-          <motion.div className="slider-container">
-            <motion.div
-              className="slider"
+      <DashboardContent>
+        <DashboardCard>
+          <SliderContainer>
+            <motion.div className="slider"
               drag="x"
-              dragConstraints={{ right: 0 }}
-            >
+              dragConstraints={{ right: 0 }}>
               {photos.map((photo) => (
                 <Card key={photo.id} photo={photo} onRemove={handleRemove} />
               ))}
             </motion.div>
-          </motion.div>
-        </motion.div>
-      </div>
+          </SliderContainer>
+        </DashboardCard>
+      </DashboardContent>
       <Footer />
-    </div>
+    </DashboardBack>
   )
 }
 

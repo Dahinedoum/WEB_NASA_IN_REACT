@@ -1,10 +1,14 @@
 import { FC } from 'react'
 import type { Props } from './types'
+import {Boton} from "./styles"
+
+
+
 export const Button: FC<Props> = ({ children, onClick }) => {
   return (
-    <button onClick={onClick} className="button">
+    <Boton onClick={onClick} >
       {children}
-    </button>
+    </Boton>
   )
 }
 

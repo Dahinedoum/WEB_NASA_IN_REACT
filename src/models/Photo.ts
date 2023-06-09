@@ -30,7 +30,8 @@ export const normalizePhoto = (input: nasaPhotosImg) => ({
    cameraName: input?.camera.full_name || "",
    status: input?.rover.status || "",
    earthDate: input?.earth_date || "",
-   isFav: false
+   isFav: false,
+   roverName: input?.rover.id || "",
 })
 
 

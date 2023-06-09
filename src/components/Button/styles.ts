@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Boton = styled.button`
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50;
+  margin: 2px;
+  margin-bottom: 7px;
+  background-color: #4caf4fb4;
   color: #fff;
   border: none;
-  border-radius: 20px;
-  font-size: 18px;
+  border-radius: 5px;
+  height:30px;
+  width:auto;
+  font-size: 2px;
   cursor: pointer;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
+
 
   &:hover {
     background-color: #45a049;
@@ -34,7 +38,7 @@ export const Button = styled.button`
   }
 `;
 
-export default Button;
+export default Boton;
 
 
 

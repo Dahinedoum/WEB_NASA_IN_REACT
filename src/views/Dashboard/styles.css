@@ -1,0 +1,18 @@
+
+.slider {
+  display: flex;
+  cursor: grab;
+  height: 67vh;
+}
+
+
+
+/* .slider::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+} */
+
+/* .slider::-webkit-scrollbar-track {  
+  border-radius: 55px;
+} */
+
+
