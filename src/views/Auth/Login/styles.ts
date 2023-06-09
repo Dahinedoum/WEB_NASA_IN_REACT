@@ -1,35 +1,51 @@
+import styled from 'styled-components';
 
-import styled from 'styled-components'
-import { Link as DefaultLink } from 'react-router-dom'
-
-export const Container = styled.div``
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
 
 export const Form = styled.form`
-  border: none;
-  margin: 10rem auto;
-  border-radius: 10px;
-  max-width: 400px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export const FormContent = styled.div`
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`;
 
+export const InputController = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`;
 
-export const Link = styled(DefaultLink)`
-  color: #2F73D8;
-  display: block;
+export const Label = styled.label`
+  color: orange;
   font-size: 16px;
-  margin-top: 16px;
-  text-align: center;
-  transition: color 0.3s ease;
+  margin-bottom: 5px;
+`;
 
-  &:hover {
-    color: #555;
-  }
-`
+export const Input = styled.input`
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 5px;
+`;
+
+export const InputError = styled.span`
+  font-size: 12px;
+  color: red;
+  margin-top: 2px;
+`;
 
 

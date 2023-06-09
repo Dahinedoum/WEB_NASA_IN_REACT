@@ -17,7 +17,7 @@ const Card: FC<Props> = ({ photo, onRemove }) => {
       <div className="cardContent">
         <div className="cardHeader">{photo.cameraName}</div>
         <Button onClick={handleOnClick}>FAV</Button>
-        <Button onClick={() => onRemove(photo)}>ELIMINAR</Button>
+        <Button onClick={() => onRemove(photo)}>DELETE</Button>
         <div className="cardFooter">
           <img src={photo.image} alt="#" className="img" />
         </div>

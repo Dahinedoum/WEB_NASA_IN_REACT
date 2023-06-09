@@ -1,11 +1,14 @@
 import { FC, memo } from 'react'
-import { Container, Form, FormContent } from './styles'
 import {
-  Input,
+  Container,
+  Form,
+  FormContent,
   InputController,
-  InputError,
   Label,
-} from '../../../components/Input/styles'
+  Input,
+  InputError,
+} from './styles';
+
 import { Button } from '../../../components/Button'
 import { Formik } from 'formik'
 import { initialValues, validationLoginSchema } from './constant'
