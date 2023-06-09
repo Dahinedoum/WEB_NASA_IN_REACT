@@ -1,4 +1,6 @@
+
 import { FC, useCallback, memo } from 'react'
+
 import Button from '../Button'
 import { Formik } from 'formik'
 import { validationNewCardSchema, initialValues } from './constant'
@@ -52,7 +54,7 @@ const NewCard: FC<Props> = ({ onCompleteCreations }) => {
               {errors?.image && <InputError>{errors.image}</InputError>}
             </InputController>
 
-            <Button type="submit">Añadir</Button>
+            <Button type="submit">Add</Button>
           </form>
         </div>
       )}

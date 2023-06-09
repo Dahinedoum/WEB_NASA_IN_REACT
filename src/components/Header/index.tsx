@@ -1,14 +1,24 @@
-import { FC, useCallback, useState } from 'react'
-import { HeaderContainer, Logo, ButtonContainer } from './styles'
+import { FC, useCallback, useEffect, useState } from 'react'
+import { HeaderContainer, ButtonContainer } from './styles'
 import { Button } from '../Button'
 import Sidebar from '../Sidebar'
 import { useNavigate } from 'react-router-dom'
+
 import { setCachedNasaPhotos } from '../../services/storage/Photos'
 import { Photo, nasaPhotosResponse, normalizePhoto } from '../../models/Photo'
 
+import { useLocation } from 'react-router-dom'
+import Logos from '../Logo'
+
+
 const Header: FC = () => {
   const navigate = useNavigate()
-  const [currentView, setCurrentView] = useState('Welcome')
+  const [currentView, setCurrentView] = useState('')
+  const location = useLocation()
+
+  useEffect(() => {
+    setCurrentView(location.pathname)
+  }, [location])
 
 
   const synchronizeNasaPhotos = async (): Promise<Photo[]> => {
@@ -36,7 +46,7 @@ const Header: FC = () => {
   }, [navigate])
 
   const handleLogout = useCallback(() => {
-    navigate('/login')
+    navigate('/Welcome')
   }, [navigate])
 
 
@@ -58,23 +68,26 @@ const Header: FC = () => {
 
   let buttonToShow = null
 
-  if (currentView === 'Welcome') {
+  if (currentView === '/Welcome') {
     buttonToShow = (
       <>
         <Button onClick={handleButtonClick}>Login</Button>
+      </>
+    )
+  } else if (currentView === '/dashboard') {
+    buttonToShow = (
+      <>
         <Button onClick={handleLogout}>Logout</Button>
         <Sidebar />
         <Button onClick={handleOnClick2}>Create</Button>
         <Button onClick={handleClick3}>Synchronize </Button>
       </>
     )
-  } else if (currentView === 'Dashboard') {
-    buttonToShow = <></>
   }
 
   return (
     <HeaderContainer>
-      <Logo />
+      <Logos />
 
       <ButtonContainer>{buttonToShow}</ButtonContainer>
     </HeaderContainer>
