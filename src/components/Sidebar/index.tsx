@@ -27,11 +27,7 @@ const Navbar: FC = () => {
               <AiIcons.AiOutlineClose />
             </Link>
           </ul>
-          <div style={{ color: 'white' }}>
-            {userInfo.email}
-
-            
-          </div>
+          <div style={{ color: 'white' }}>{userInfo.email}</div>
         </nav>
       </IconContext.Provider>
     </>

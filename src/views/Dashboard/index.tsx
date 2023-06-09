@@ -11,6 +11,7 @@ import {
   removeCachedNasaPhotos,
 } from '../../services/storage/Photos'
 import NewCard from '../../components/newCard/newCard'
+import { BackgroundImage } from './styles'
 
 const Dashboard: FC = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
@@ -56,7 +57,11 @@ const Dashboard: FC = () => {
     <div>
       <Header />
       <NewCard onCompleteCreations={handleOnCompleteCreations} />
-
+      <BackgroundImage
+        src="../DashBackground.jpg"
+        alt="DashBackground"
+        className="backgroundImage"
+      />
       <div className="dashboardContent">
         <motion.div className="dashboardCard">
           <motion.div className="slider-container">
