@@ -1,4 +1,4 @@
-.button{
+/* .button{
   background-color: rgb(191, 0, 0);
   border: 2px solid gray;
   border-radius: 4px;
@@ -7,5 +7,11 @@
   width: 3rem;
   padding: 6px;
   margin: 12px;
+
+}  */
+
+.button{
+  background-color: #616161;
+
 
 } 
